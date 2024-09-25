@@ -1,10 +1,8 @@
-name: "Bulidability and Sanity"
+name: Build
+
 on:
-  push:
-    branches:
-      - master
-      - '*'
-      - '!libretro'
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
 
 jobs:
   sanity:
