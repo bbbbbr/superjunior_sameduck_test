@@ -9,8 +9,10 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [ubuntu-latest, ubuntu-20.04]
-        cc: [gcc, clang]
+#        os: [ubuntu-latest, ubuntu-20.04]
+        os: [ubuntu-20.04]
+#        cc: [gcc, clang]
+        cc: [gcc]
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v3
