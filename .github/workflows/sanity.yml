@@ -22,7 +22,7 @@ jobs:
           ./.github/actions/install_deps.sh ${{ matrix.os }}
       - name: Build
         run: |
-          ${{ matrix.cc }} -v; (make -j all CONF=release CC=${{ matrix.cc }} || (echo "==== Build Failed ==="; make all CONF=release CC=${{ matrix.cc }}))
+          ${{ matrix.cc }} -v; (make -j CONF=release CC=${{ matrix.cc }} || (echo "==== Build Failed ==="; make CONF=release CC=${{ matrix.cc }}))
       - name: Sanity tests
         shell: bash
         run: |
